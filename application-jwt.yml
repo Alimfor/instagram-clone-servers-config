@@ -2,5 +2,6 @@ security:
   jwt:
     header: ${JWT_HEADER}
     prefix: '${JWT_PREFIX} '
+    subject: ${JWT_SUBJECT}
     expiration: ${JWT_EXPIRATION}
     secret: ${JWT_SECRET}

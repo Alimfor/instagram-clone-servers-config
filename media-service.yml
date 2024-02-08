@@ -13,3 +13,5 @@ file:
   upload-dir: ${UPLOAD_TO_LOCAL_DIR}
   path:
     prefix: /images
+
+
