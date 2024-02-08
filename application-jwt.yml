@@ -3,5 +3,6 @@ security:
     header: ${JWT_HEADER}
     prefix: '${JWT_PREFIX} '
     subject: ${JWT_SUBJECT}
+    issuer: ${JWT_ISSUER}
     expiration: ${JWT_EXPIRATION}
     secret: ${JWT_SECRET}
