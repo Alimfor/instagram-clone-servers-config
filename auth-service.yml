@@ -1,39 +1,10 @@
+server:
+  port: 9000
+
 spring:
-  data:
-    mongodb:
-      database: ${MONGO_DB_NAME}
-      username: ${MONGO_DB_USERNAME}
-      password: ${MONGO_DB_PASSWORD}
-      port: 27017
-      host: localhost
-      authentication-database: admin
   cloud:
     stream:
       bindings:
         sendUserChangedEvent-out-0:
           destination: send-user-changed-event
           content-type: application/json
-      kafka:
-        binder:
-          brokers:
-            - localhost:9092
-          configuration:
-            key:
-              deserializer: org.apache.kafka.common.serialization.StringDeserializer
-
-security:
-  jwt:
-    header: ${JWT_HEADER}
-    prefix: '${JWT_PREFIX} '
-    subject: ${JWT_SUBJECT}
-    issuer: ${JWT_ISSUER}
-    expiration: ${JWT_EXPIRATION}
-    secret: ${JWT_SECRET}
-  service:
-    username: ${SERVICE_USERNAME}
-    password: ${SERVICE_PASSWORD}
-
-eureka:
-  client:
-    service-url:
-      default-zone: http://localhost:8761/eureka

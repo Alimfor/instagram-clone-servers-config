@@ -1,0 +1,9 @@
+server:
+  port: 8001
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        sendPostChangedEvent-out-0:
+          destination: post-changed-event

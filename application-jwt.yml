@@ -1,0 +1,6 @@
+security:
+  jwt:
+    header: ${JWT_HEADER}
+    prefix: '${JWT_PREFIX} '
+    expiration: ${JWT_EXPIRATION}
+    secret: ${JWT_SECRET}

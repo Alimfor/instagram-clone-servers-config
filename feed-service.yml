@@ -1,0 +1,24 @@
+server:
+  port: 8003
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 5000
+            read-timeout: 5000
+            logger-level: basic
+    function:
+      definition: receivePostChangedEvent
+    stream:
+      bindings:
+        receivePostChangedEvent-in-0:
+          destination: post-changed-event
+          group: ${spring.application.name}
+          content-type: application/json

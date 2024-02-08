@@ -1,0 +1,4 @@
+security:
+  service:
+    username: ${SERVICE_USERNAME}
+    password: ${SERVICE_PASSWORD}

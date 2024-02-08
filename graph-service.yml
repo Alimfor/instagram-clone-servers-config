@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: ${NEO4J_USERNAME}
+      password: ${NEO4J_PASSWORD}
+  cloud:
+    function:
+      definition: sentUserChangedEvent
+    stream:
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          configuration:
+            key:
+              deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      bindings:
+        sentUserChangedEvent-in-0:
+          destination: send-user-changed-event
+          group: ${spring.application.name}
+          content-type: application/json
+
