@@ -8,3 +8,7 @@ spring:
         sendUserChangedEvent-out-0:
           destination: send-user-changed-event
           content-type: application/json
+
+default:
+  values:
+    profile-picture-url: 'https://www.clipartmax.com/png/full/131-1313893_account-avatar-face-head-person-profile-user-comments-person-head-icon-png.png'

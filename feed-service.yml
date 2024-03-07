@@ -22,3 +22,13 @@ spring:
           destination: post-changed-event
           group: ${spring.application.name}
           content-type: application/json
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  info:
+    env:
+      enabled: true
