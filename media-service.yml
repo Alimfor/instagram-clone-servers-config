@@ -12,6 +12,6 @@ spring:
 file:
   upload-dir: ${UPLOAD_TO_LOCAL_DIR}
   path:
-    prefix: /images
+    prefix: /image/upload
 
 
